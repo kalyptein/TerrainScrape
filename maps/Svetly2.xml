@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MapView>
+  <CaptureParameters>
+    <xTiles>4</xTiles>
+    <yTiles>4</yTiles>
+    <Format>PNG</Format>
+    <SaveSubimages>true</SaveSubimages>
+  </CaptureParameters>
+  <CenterLat>54.776930012578965</CenterLat>
+  <CenterLng>21.32213599048555</CenterLng>
+  <Zoom>9</Zoom>
+  <MapArea>
+    <Name>Svetly</Name>
+    <Lock>true</Lock>
+    <North>54.785372719137285</North>
+    <South>54.560724327077175</South>
+    <East>20.283865386620164</East>
+    <West>19.963064605370164</West>
+  </MapArea>
+  <MapArea>
+    <Name>NewArea</Name>
+    <Lock>false</Lock>
+    <North>55.08066272732427</North>
+    <South>54.84934062057686</South>
+    <East>21.324819976463914</East>
+    <West>20.646963531151414</West>
+  </MapArea>
+  <MapArea>
+    <Name>NewArea2</Name>
+    <Lock>false</Lock>
+    <North>54.803764758576726</North>
+    <South>54.57247896867215</South>
+    <East>22.277883941307664</East>
+    <West>21.600027495995164</West>
+  </MapArea>
+</MapView>

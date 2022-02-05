@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MapView>
+  <CaptureParameters>
+    <xTiles>4</xTiles>
+    <yTiles>4</yTiles>
+    <Format>PNG</Format>
+    <SaveSubimages>true</SaveSubimages>
+  </CaptureParameters>
+  <CenterLat>41.84654720840246</CenterLat>
+  <CenterLng>12.542130367364734</CenterLng>
+  <Zoom>11</Zoom>
+  <MapArea>
+    <Name>Vatican</Name>
+    <North>41.92582341582318</North>
+    <South>41.87107463683785</South>
+    <East>12.510083757340908</East>
+    <West>12.390744768083095</West>
+  </MapArea>
+  <MapArea>
+    <Name>Airport</Name>
+    <North>41.92474345923284</North>
+    <South>41.70422871289851</South>
+    <East>12.334487915039062</East>
+    <West>12.161590576171875</West>
+  </MapArea>
+  <MapArea>
+    <Name>Castle Gandalfo</Name>
+    <North>41.78260440184259</North>
+    <South>41.70777348163223</South>
+    <East>12.769635759294033</East>
+    <West>12.600171647965908</West>
+  </MapArea>
+</MapView>

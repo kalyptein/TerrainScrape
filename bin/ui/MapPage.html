@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable-n=no">
+	<title>TerrainScrape v6</title>
+	
+	<!--link rel="stylesheet" href="menu.css">
+	<link rel="stylesheet" href="tooltip.css"-->
+	
+	<style type="text/css">
+		html { height: 100% }
+		body { height: 100%; margin: 0px; padding: 0px }
+		#map_canvas { height: 100%; background-color: #666970; }
+		
+		.buttonPressed {
+			border-style: inset;
+		}
+		
+		.itemLocked {
+			color: grey;
+		}
+		
+		.areaButton {
+			width: 25px;
+			height: 25px;
+			padding: 0px
+		}
+	</style>
+	
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyCRo7pxd6yoyd5gv_Gh7L_7Y-DhLeeYvKY"></script>	
+
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="area.js"></script>
+	<script type="text/javascript" src="ui.js"></script>
+	
+	<script type="text/javascript">
+	</script>
+</head>
+
+<body onload="initialize()">
+
+	<div style="display: flex; height: 100%; margin-left: 5px">
+		<div id="map_controls" style="display: flex; flex-direction: column" ondragstart="return false;" ondrop="return false;">
+		
+			<p>
+				<button type="button" title="Save Map" id="saveButton" style="width: 50px; height: 25px; padding: 0px" onclick="saveMap()">Save</button>
+			</p>
+		
+			<div id="" style="overflow-x: auto; overflow-y: scroll; border-style: solid; border-color: gray; border-width: thin; flex-grow: 1">
+				<form action="">
+					<ul id="rect_list" style="list-style-type: none">
+					</ul>
+				</form>
+			</div>
+
+			<table style="height: 55px">
+				<tr>
+					<td><button type="button" title="Add New Area" id="addButton" class="areaButton" onclick="doDraw();">&#65291;</button></td>
+					<td><button type="button" title="Remove Selected Area" id="removeButton" class="areaButton" disabled onclick="removeRect(selected)">&mdash;</button></td>
+					<td><button type="button" title="Rename Selected Area" id="renameButton" class="areaButton" disabled onclick="renameRect(selected)">&hellip;</button></td>
+					<td><button type="button" title="Lock/Unlock Selected Area" id="lockButton" class="areaButton" disabled onclick="lockRect(selected)">&#128274;</button></td>
+					<td><button type="button" title="Capture Selected Area" id="captureButton" class="areaButton" disabled onclick="capture(selected)">&#128247;</button></td>
+				</tr>
+			</table>
+
+			<div id="">
+				<form action="">
+					<table>
+						<tr>
+						<td style="padding-left: 5px; padding-right: 10px">Center Lat</td>
+						<td><input type="text" id="centerLat" size="20" onchange="moveRect()" onkeypress="enter(event, moveRect, null)"></td>
+						</tr>
+						<tr>
+						<td style="padding-left: 5px; padding-right: 10px">Center Lng</td>
+						<td><input type="text" id="centerLng" size="20" onchange="moveRect()" onkeypress="enter(event, moveRect, null)"></td>
+						</tr>
+						<tr>
+						<td style="padding-left: 5px; padding-right: 10px">North</td>
+						<td><input type="text" id="northLat" size="20" onchange="setRectBounds()" onkeypress="enter(event, setRectBounds, null)"></td>
+						</tr>
+						<tr>
+						<td style="padding-left: 5px; padding-right: 10px">South</td>
+						<td><input type="text" id="southLat" size="20" onchange="setRectBounds()" onkeypress="enter(event, setRectBounds, null)"></td>
+						</tr>
+						<tr>
+						<td style="padding-left: 5px; padding-right: 10px">East</td>
+						<td><input type="text" id="eastLng" size="20" onchange="setRectBounds()" onkeypress="enter(event, setRectBounds, null)"></td>
+						</tr>
+						<tr>
+						<td style="padding-left: 5px; padding-right: 10px">West</td>
+						<td><input type="text" id="westLng" size="20" onchange="setRectBounds()" onkeypress="enter(event, setRectBounds, null)"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		
+		<div id="map_canvas" style="flex-grow: 1; margin-left: 5px;"></div>
+	</div> 
+</body>
+
+</html>
